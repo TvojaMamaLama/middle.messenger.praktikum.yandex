@@ -1,0 +1,24 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+
+  "targets":{
+    "default": {
+      "includeNodeModules": true
+    }
+  },
+
+  "scripts": {
+    "dev": "vite --port 3000 --host",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "handlebars": "^4.7.8",
+    "sass": "^1.71.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4"
+  }
+}
