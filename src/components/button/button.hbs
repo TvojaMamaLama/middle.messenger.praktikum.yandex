@@ -1,3 +1,6 @@
-<button class="button{{#if className}} {{className}}{{/if}}" page="{{ page }}">
+<button
+  class="button{{#if type}} button__{{type}}{{/if}}"
+  page="{{ page }}"
+>
   {{ text }}
 </button>

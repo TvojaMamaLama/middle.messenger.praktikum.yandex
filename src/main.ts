@@ -1,10 +1,12 @@
 import Handlebars from 'handlebars';
+import './main.scss';
 import * as Components from './components';
 import * as Pages from './pages';
 
 const pages: any = {
   'chat': [Pages.ChatPage],
   'login': [Pages.LoginPage],
+  'signup': [Pages.SignupPage],
 };
 
 Object.entries(Components).forEach(([ name, component]: any) => {

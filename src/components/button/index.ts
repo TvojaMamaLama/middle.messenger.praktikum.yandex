@@ -1,2 +1,2 @@
-import './button.scss';
-export { default as Button } from './button.hbs?raw'
+import './Button.scss';
+export { default as Button } from './Button.hbs?raw'
