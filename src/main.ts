@@ -7,6 +7,7 @@ const pages: any = {
   'chat': [Pages.ChatPage],
   'login': [Pages.LoginPage],
   'signup': [Pages.SignupPage],
+  'error': [Pages.ErrorPage],
 };
 
 Object.entries(Components).forEach(([ name, component]: any) => {
@@ -19,6 +20,7 @@ function navigate(page: string) {
   document.querySelector<HTMLDivElement>('#app')!.innerHTML = handlebarsFunct(args);
 };
 
+// document.addEventListener("DOMContentLoaded", () => navigate('error'));
 document.addEventListener("DOMContentLoaded", () => navigate('login'));
 
 document.addEventListener('click', (e: any) => {
