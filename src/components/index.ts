@@ -1,7 +1,10 @@
 export { Button } from './Button';
-export { Link } from './link';
-export { ChatItem } from './chat-item';
+export { Link } from './Link';
+export { ChatItem } from './ChatItem';
 export { ChatList } from './chat-list';
 export { PageTitle } from './PageTitle';
 export { InputField } from './InputField';
 export { Dialog } from './Dialog';
+export { Sidebar } from './Sidebar';
+export { SearchPanel } from './SearchPanel';
+export { Avatar } from './Avatar';

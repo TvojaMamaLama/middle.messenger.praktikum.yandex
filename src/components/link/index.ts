@@ -1,2 +1,2 @@
-import './link.scss';
-export { default as Link } from './link.hbs?raw'
+import './Link.scss';
+export { default as Link } from './Link.hbs?raw'

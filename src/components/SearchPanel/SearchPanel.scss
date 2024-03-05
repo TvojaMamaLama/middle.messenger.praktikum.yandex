@@ -1,0 +1,22 @@
+.search-panel {
+  input {
+    border: none;
+    width: 100%;
+
+    font-size: 13px;
+    line-height: 13px;
+    color: #1E1E1E;
+
+    background: #EFEFEF;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  input:focus {
+    outline: none;
+  }
+  input::placeholder {
+    text-align: center;
+ }
+  margin: 23px 0 14px;
+}

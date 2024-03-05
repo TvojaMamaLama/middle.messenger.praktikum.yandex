@@ -1,9 +1,8 @@
 <div class="chat-page">
-  Чат
-  {{!-- {{#> ChatList className='chat-page__list'}}
-    {{#each {chat-page-list} }}
-      {{>ChatItem }}
-    {{/each}}
-  {{/ ChatList}} --}}
-  {{> Link page="LoginPage" text="Назад к логину"}}
+  {{>Sidebar}}
+
+  <div class="chat">
+    Выберите чат чтобы отправить сообщение
+  </div>
+  {{!-- {{> Link page="LoginPage" text="Назад к логину"}} --}}
 </div>

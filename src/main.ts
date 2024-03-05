@@ -21,11 +21,12 @@ function navigate(page: string) {
 };
 
 // document.addEventListener("DOMContentLoaded", () => navigate('error'));
-document.addEventListener("DOMContentLoaded", () => navigate('login'));
+// document.addEventListener("DOMContentLoaded", () => navigate('login'));
+document.addEventListener("DOMContentLoaded", () => navigate('chat'));
 
 document.addEventListener('click', (e: any) => {
   const page = e.target.getAttribute('page');
-  console.log(page);
+  // console.log(page);s
   if (page) {
     navigate(page);
 

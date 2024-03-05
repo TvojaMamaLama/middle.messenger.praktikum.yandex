@@ -1,6 +1,9 @@
 <button
-  class="button{{#if type}} button__{{type}}{{/if}}"
+  class="button{{#if type}} button__{{type}}{{/if}}{{#if stylingMode}} button__{{stylingMode}}{{/if}}"
   page="{{ page }}"
 >
   {{ text }}
 </button>
+
+{{!-- type: outlined text contained --}}
+{{!-- stylingMode: normal success default --}}

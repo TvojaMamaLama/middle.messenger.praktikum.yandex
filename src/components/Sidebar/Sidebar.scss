@@ -1,0 +1,20 @@
+.sidebar {
+  position: absolute;
+  width: 310px;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  padding: 21px 10px 0;
+  box-sizing: border-box;
+
+  background: #FBFBFB;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
