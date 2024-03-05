@@ -1,0 +1,20 @@
+.data-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+
+  .data-field__label {
+    font-size: 13px;
+    line-height: 13px;
+
+    color: #1E1E1E;
+  }
+
+  .data-field__value {
+    font-size: 13px;
+    line-height: 13px;
+
+    color: #999999;
+  }
+}

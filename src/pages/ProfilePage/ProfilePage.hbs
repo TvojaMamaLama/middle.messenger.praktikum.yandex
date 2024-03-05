@@ -1,0 +1,30 @@
+<div class="profile-page">
+  {{>ProfileSidebar}}
+  <div class="user-data">
+    {{>Avatar size="130"}}
+    <span class="user-data__name">Имя пользователя</span>
+
+    <div class="user-data__fieldset">
+      {{>UserDataField label="Почта" value="pochta@yandex.ru" }}
+      <div class="line"></div>
+      {{>UserDataField label="Логин" value="ivanivanov" }}
+      <div class="line"></div>
+      {{>UserDataField label="Имя" value="Иван" }}
+      <div class="line"></div>
+      {{>UserDataField label="Фамилия" value="Иванов" }}
+      <div class="line"></div>
+      {{>UserDataField label="Имя в чате" value="Иван" }}
+      <div class="line"></div>
+      {{>UserDataField label="Телефон" value="+7 (909) 967 30 30" }}
+    </div>
+
+    <div class="user-data__buttons">
+      {{>Button text="Изменить данные" type="text"}}
+      <div class="line"></div>
+      {{>Button text="Изменить пароль" type="text"}}
+      <div class="line"></div>
+      {{>Button text="Выйти" type="text"}}
+    </class=>
+  </div>
+</div>
+

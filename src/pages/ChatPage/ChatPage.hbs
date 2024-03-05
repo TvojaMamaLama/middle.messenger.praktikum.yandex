@@ -1,8 +1,13 @@
 <div class="chat-page">
   {{>Sidebar}}
-
+  {{!-- если не выбран диалог --}}
+  {{!-- <div class="chat__empty">Выберите чат чтобы отправить сообщение</div> --}}
+  {{!-- если выбран диалог --}}
   <div class="chat">
-    Выберите чат чтобы отправить сообщение
+    {{>ChatHeader}}
+    {{>MessageList}}
+    {{>MessageWrapper}}
   </div>
+
   {{!-- {{> Link page="LoginPage" text="Назад к логину"}} --}}
 </div>

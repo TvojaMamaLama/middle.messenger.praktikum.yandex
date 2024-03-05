@@ -1,21 +1,18 @@
-.sidebar {
-  width: 310px;
+.profile-sidebar {
+  width: 64px;
   height: 100%;
   padding: 21px 10px 0;
   box-sizing: border-box;
 
   background: #FBFBFB;
-  border-right: 1px solid #EAEAEA;
 
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.sidebar-button {
+.profile-sidebar-button {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  img {
-    margin-left: 5px;
-  }
 }

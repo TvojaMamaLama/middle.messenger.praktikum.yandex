@@ -8,6 +8,7 @@ const pages: any = {
   'login': [Pages.LoginPage],
   'signup': [Pages.SignupPage],
   'error': [Pages.ErrorPage],
+  'profile': [Pages.ProfilePage],
 };
 
 Object.entries(Components).forEach(([ name, component]: any) => {
@@ -22,11 +23,12 @@ function navigate(page: string) {
 
 // document.addEventListener("DOMContentLoaded", () => navigate('error'));
 // document.addEventListener("DOMContentLoaded", () => navigate('login'));
-document.addEventListener("DOMContentLoaded", () => navigate('chat'));
+// document.addEventListener("DOMContentLoaded", () => navigate('chat'));
+document.addEventListener("DOMContentLoaded", () => navigate('profile'));
 
 document.addEventListener('click', (e: any) => {
   const page = e.target.getAttribute('page');
-  // console.log(page);s
+  // console.log(page);
   if (page) {
     navigate(page);
 
