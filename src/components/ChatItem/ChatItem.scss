@@ -1,12 +1,14 @@
+@import '../../variables.scss';
+
 .chat-item {
   display: flex;
   padding: 10px 0;
 
-  border-bottom: 1px solid #EAEAEA;
+  border-bottom: 1px solid $grey-03-color;
 }
 
 .chat-item--current {
-  background-color: #E4EDFD;
+  background-color: $grey-04-color;;
 }
 
 .chat-item__message {
@@ -20,13 +22,12 @@
   font-size: 13px;
   line-height: 13px;
   
-  color: #1E1E1E;
 }
 
 .message {
   font-size: 12px;
   line-height: 15px;
-  color: #999999;
+  color: $grey-01-color;
   height: 30px;
   margin-top: 4px;
 }
@@ -46,14 +47,14 @@
     line-height: 13px;
     text-align: right;
 
-    color: #999999;
+    color: $grey-01-color;
   }
 
   .info__unread-counter {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #3369F3;
+    background: $primary-color;
 
     display: flex;
     justify-content: center;
@@ -62,7 +63,7 @@
     font-weight: 500;
     font-size: 11px;
     line-height: 12px;
-    color: #FFFFFF;
+    color: $white-color;
   }
 }
 

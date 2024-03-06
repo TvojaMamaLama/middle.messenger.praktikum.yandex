@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .search-panel {
   position: relative;
   input {
@@ -6,9 +8,9 @@
 
     font-size: 13px;
     line-height: 13px;
-    color: #1E1E1E;
+    color: $grey-01-color;
 
-    background: #EFEFEF;
+    background: $grey-02-color;
     border-radius: 5px;
     padding: 10px;
     box-sizing: border-box;

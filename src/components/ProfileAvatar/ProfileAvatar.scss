@@ -1,4 +1,6 @@
-.profile-avatar {
+@import '../../variables.scss';
+
+.profile-avatar__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,9 +8,12 @@
     width: 130px;
     height: 130px;
 
-    background: #EFEFEF;
+    background: $grey-02-color;
     border-radius: 50%;
   }
+}
+.profile-avatar {
+  display: flex;
 }
 
 .profile-avatar__name {
@@ -17,5 +22,28 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 16px;
-  color: #1E1E1E;
+}
+
+.profile-avatar-img__hover {
+  display: none;
+}
+.profile-avatar:hover {
+  cursor: pointer;
+  .profile-avatar-img__hover {
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    padding: 33px;
+    box-sizing: border-box;
+  
+    background: rgba(0, 0, 0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 13px;
+    line-height: 14px;
+    color: $white-color;
+  }
 }

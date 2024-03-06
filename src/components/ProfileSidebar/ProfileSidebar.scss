@@ -1,11 +1,13 @@
+@import '../../variables.scss';
+
 .profile-sidebar {
   width: 64px;
   height: 100%;
   padding: 21px 10px 0;
   box-sizing: border-box;
 
-  background: #FBFBFB;
-  border-right: 1px solid #EAEAEA;
+  background: $grey-05-color;
+  border-right: 1px solid $grey-03-color;
 
   display: flex;
   align-items: center;

@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .input-field {
   display: flex;
   flex-direction: column;
@@ -8,7 +10,7 @@
   font-size: 9px;
   line-height: 9px;
 
-  color: #999999;
+  color: $grey-01-color;
   margin-bottom: 8px;
 }
 
@@ -16,11 +18,11 @@
   input {
     border: none;
     width: 100%;
-    border-bottom: 1px solid #3369F3;
+    border-bottom: 1px solid $primary-color;
 
     font-size: 13px;
     line-height: 13px;
-    color: #1E1E1E;
+    color: $default-text-color;
   }
 
   input:focus {

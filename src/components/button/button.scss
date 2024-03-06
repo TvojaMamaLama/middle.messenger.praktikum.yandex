@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .button {
   background: none;
   border: none;
@@ -12,46 +14,13 @@
   width: 100%;
   padding: 12px;
 
-  background: #3369F3;
-  color: #FFFFFF;
+  background: $primary-color;
+  color: $white-color;
   border-radius: 8px;
 }
 
 .button__text {
   font-size: 12px;
   line-height: 12px;
-  color: #3369F3;
+  color: $primary-color;
 }
-
-// .button {
-//   border-radius: 4px;
-//   cursor: pointer;
-//   font-size: 16px;
-//   border: none;
-//   background: none;
-//   margin: 0;
-//   color: inherit;
-//   outline: none;
-//   padding: 10px 20px;
-//   &.outlined {
-//     border: 2px solid currentColor;
-//     color: currentColor;
-//     background-color: transparent;
-//   }
-//   &.contained {
-//     background-color: currentColor;
-//     color: white;
-//   }
-//   &.normal {
-//     color: #007bff;
-//   }
-//   &.success {
-//     color: #28a745;
-//   }
-//   &.default {
-//     color: #6c757d;
-//   }
-//   &.danger {
-//     color: #dc3545;
-//   }
-// }

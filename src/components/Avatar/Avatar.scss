@@ -1,7 +1,9 @@
+@import '../../variables.scss';
+
 .chat-item__avatar {
   width: 47px;
   height: 47px;
 
-  background: #EFEFEF;
+  background: $grey-02-color;
   border-radius: 50%;
 }

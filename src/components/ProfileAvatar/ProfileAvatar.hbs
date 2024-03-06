@@ -1,9 +1,13 @@
-<div class="profile-avatar">
-  {{#if avatar}}
-    <img scr={{ avatar }} />
-  {{else }}
-    <img src="/icons/profile.svg" />
-  {{/if}}
-
+<div class="profile-avatar__wrapper">
+  <div class="profile-avatar">
+    <div>
+      {{#if avatar}}
+        <img scr={{ avatar }} />
+      {{else }}
+        <img src="/icons/profile.svg" />
+      {{/if}}
+    </div>
+    <div class="profile-avatar-img__hover">Поменять аватар</div>
+  </div>
   <span class="profile-avatar__name">{{name}}</span>
 </div>
