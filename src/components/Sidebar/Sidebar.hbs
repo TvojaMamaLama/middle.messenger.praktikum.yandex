@@ -1,10 +1,10 @@
 <div class="sidebar">
   <div class="sidebar-button">
     {{>Button page="profile" text="Профиль" type="text"}}
-    <img src="/icons/right.svg" />
+    <img src="../../static/icons/right.svg" />
   </div>
   {{>SearchPanel placeholder="Поиск"}}
-  <div className='sidebar-list'>
+  <div className='chat-list'>
     {{>ChatItem message="Привет" unread="2" name="Андрей" time="ср" }}
     {{>ChatItem current="true" message="Привет Привеь" name="Андрей" time="ср" }}
     {{>ChatItem message="Привет Привет Привет" name="Андрей" time="ср" }}

@@ -2,13 +2,14 @@
 
 .chat-item {
   display: flex;
-  padding: 10px 0;
-
-  border-bottom: 1px solid $grey-03-color;
+  align-items: center;
+  margin: 5px 0;
+  height: 61px;
+  box-sizing: border-box;
 }
 
 .chat-item--current {
-  background-color: $grey-04-color;;
+  background-color: $grey-04-color;
 }
 
 .chat-item__message {
