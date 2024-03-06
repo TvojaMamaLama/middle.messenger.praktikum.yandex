@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", handleNavigation);
 document.addEventListener('click', (e: any) => {
   const page = e.target.getAttribute('page');
   if (page) {
+    console.log(page);
     navigate(page);
     e.preventDefault();
   }

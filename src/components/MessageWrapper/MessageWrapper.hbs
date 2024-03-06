@@ -1,1 +1,13 @@
-<div class="message-wrapper">footer</div>
+<div class="message-wrapper">
+  <div class="line"></div>
+  <div class="message">
+    <div class="message-actions-menu">
+      <img src="/static/icons/pin.svg" />
+    </div>
+    <div class="message-field">
+      {{!-- Сообщение --}}
+      <input placeholder="Сообщение" />
+    </div>
+    {{>Button text="->" type="contained" stylingMode="normal"}}
+  </div>
+</div>

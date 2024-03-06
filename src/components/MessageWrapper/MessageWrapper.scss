@@ -1,6 +1,26 @@
+@import '../../variables.scss';
+
 .message-wrapper {
   width: 100%;
-  background-color: #333; /* Пример цвета фона */
-  color: #fff; /* Пример цвета текста */
-  padding: 10px 0; /* Пример отступов */
+  padding: 11px 13px;
+  box-sizing: border-box;
+  .message {
+    display: flex;
+    justify-content: space-between;
+  }
+  .message-field {
+    margin: 0 10px;
+    width: 100%;
+
+    input {
+      width: 100%;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      background: $grey-02-color;
+      border: none;
+      outline: none;
+      border-radius: 30px;
+    }
+
+  }
 }
