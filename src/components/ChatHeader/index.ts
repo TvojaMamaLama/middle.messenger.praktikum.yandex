@@ -1,2 +1,2 @@
-import './ChatHeader.scss';
+import './ChatHeader.scss'
 export { default as ChatHeader } from './ChatHeader.hbs?raw'

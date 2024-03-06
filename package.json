@@ -3,21 +3,29 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-
-  "targets":{
+  "targets": {
     "default": {
       "includeNodeModules": true
     }
   },
-
   "scripts": {
     "dev": "vite --port 3000 --host",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "npx eslint src",
+    "prettier": "npx prettier src --check",
+    "prettier:fix": "npm run prettier -- --write"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.1.1",
+    "@typescript-eslint/parser": "^7.1.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-hbs": "^1.0.3",
+    "express": "^4.18.3",
     "handlebars": "^4.7.8",
+    "prettier": "3.2.5",
     "sass": "^1.71.1",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^5.2.2",
     "vite": "^5.1.4"
   }
