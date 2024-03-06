@@ -1,0 +1,9 @@
+<div class="profile-avatar">
+  {{#if avatar}}
+    <img scr={{ avatar }} />
+  {{else }}
+    <img src="/icons/profile.svg" />
+  {{/if}}
+
+  <span class="profile-avatar__name">{{name}}</span>
+</div>

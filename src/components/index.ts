@@ -12,3 +12,4 @@ export { MessageWrapper } from './MessageWrapper';
 export { MessageList } from './MessageList';
 export { ProfileSidebar } from './ProfileSidebar';
 export { UserDataField } from './UserDataField';
+export { ProfileAvatar } from './ProfileAvatar';

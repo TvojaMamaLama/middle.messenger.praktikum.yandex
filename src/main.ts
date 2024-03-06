@@ -9,6 +9,8 @@ const pages: any = {
   'signup': [Pages.SignupPage],
   'error': [Pages.ErrorPage],
   'profile': [Pages.ProfilePage],
+  'edit': [Pages.EditDataPage],
+  'password': [Pages.EditPasswordPage],
 };
 
 Object.entries(Components).forEach(([ name, component]: any) => {
@@ -28,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => navigate('profile'));
 
 document.addEventListener('click', (e: any) => {
   const page = e.target.getAttribute('page');
-  // console.log(page);
+  console.log(page);
   if (page) {
     navigate(page);
 

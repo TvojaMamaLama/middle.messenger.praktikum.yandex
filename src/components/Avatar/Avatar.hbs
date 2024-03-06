@@ -1,7 +1,7 @@
 <div class="avatar">
-  {{!-- {{#if avatar}}
-    <img class="chat-item__avatar" scr={{ avatar }} />
-  {{else }} --}}
-  <div class="chat-item__avatar" style="{{#if size}}height: {{size}}px; width: {{size}}px;{{/if}}"></div>
-  {{!-- {{/if}} --}}
+  {{#if avatar}}
+    <img class="chat-item__avatar" scr={{ avatar }} style="{{#if size}}height: {{size}}px; width: {{size}}px;{{/if}}" />
+  {{else }}
+    <div class="chat-item__avatar" style="{{#if size}}height: {{size}}px; width: {{size}}px;{{/if}}"></div>
+  {{/if}}
 </div>
