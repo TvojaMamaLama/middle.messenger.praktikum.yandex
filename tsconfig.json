@@ -16,12 +16,12 @@
         "strict": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
-        "noFallthroughCasesInSwitch": true
+        "noFallthroughCasesInSwitch": true,
 
-        // "paths": {
-        //   "@pages/*": ["./pages/*"],
-        //   "@components/*": ["./components/*"]
-        // }
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["src/*"]
+        }
     },
     "include": ["src"]
 }
