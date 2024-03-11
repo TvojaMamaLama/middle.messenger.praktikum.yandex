@@ -1,67 +1,67 @@
-@import "../../variables.scss";
+@import '../../variables.scss';
 
 .chat-item {
-  display: flex;
-  align-items: center;
-  margin: 5px 0;
-  height: 61px;
-  box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    height: 61px;
+    box-sizing: border-box;
 }
 
 .chat-item--current {
-  background-color: $grey-04-color;
+    background-color: $grey-04-color;
 }
 
 .chat-item__message {
-  width: 100%;
-  padding-left: 10px;
+    width: 100%;
+    padding-left: 10px;
 }
 
 .message__name {
-  font-size: 700;
-  font-weight: 600;
-  font-size: 13px;
-  line-height: 13px;
+    font-size: 700;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 13px;
 }
 
 .message {
-  font-size: 12px;
-  line-height: 15px;
-  color: $grey-01-color;
-  height: 30px;
-  margin-top: 4px;
+    font-size: 12px;
+    line-height: 15px;
+    color: $grey-01-color;
+    height: 30px;
+    margin-top: 4px;
 }
 
 .chat-item__info {
-  width: 30px;
-  height: 45px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-  .info__time {
-    font-size: 9px;
-    line-height: 13px;
-    text-align: right;
-
-    color: $grey-01-color;
-  }
-
-  .info__unread-counter {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: $primary-color;
-
+    width: 30px;
+    height: 45px;
+    box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 
-    font-weight: 500;
-    font-size: 11px;
-    line-height: 12px;
-    color: $white-color;
-  }
+    .info__time {
+        font-size: 9px;
+        line-height: 13px;
+        text-align: right;
+
+        color: $grey-01-color;
+    }
+
+    .info__unread-counter {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: $primary-color;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 12px;
+        color: $white-color;
+    }
 }

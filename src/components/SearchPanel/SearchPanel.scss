@@ -1,30 +1,30 @@
-@import "../../variables.scss";
+@import '../../variables.scss';
 
 .search-panel {
-  position: relative;
-  input {
-    border: none;
-    width: 100%;
+    position: relative;
+    input {
+        border: none;
+        width: 100%;
 
-    font-size: 13px;
-    line-height: 13px;
-    color: $grey-01-color;
+        font-size: 13px;
+        line-height: 13px;
+        color: $grey-01-color;
 
-    background: $grey-02-color;
-    border-radius: 5px;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  input:focus {
-    outline: none;
-  }
-  input::placeholder {
-    text-align: center;
-  }
-  margin: 23px 0 14px;
-  .search-panel__icon {
-    position: absolute;
-    left: 110px;
-    top: 10px;
-  }
+        background: $grey-02-color;
+        border-radius: 5px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    input:focus {
+        outline: none;
+    }
+    input::placeholder {
+        text-align: center;
+    }
+    margin: 23px 0 14px;
+    .search-panel__icon {
+        position: absolute;
+        left: 110px;
+        top: 10px;
+    }
 }

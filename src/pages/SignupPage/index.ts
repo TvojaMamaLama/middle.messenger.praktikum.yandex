@@ -1,2 +1,2 @@
-import "./SignupPage.scss";
-export { default as SignupPage } from "./SignupPage.hbs?raw";
+import './SignupPage.scss'
+export { default as SignupPage } from './SignupPage.hbs?raw'
