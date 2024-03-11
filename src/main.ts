@@ -3,7 +3,7 @@ import './main.scss'
 import * as Components from './components'
 import * as Pages from './pages'
 
-const pages: any = {
+const pages: { [key: string]: string[] } = {
     chat: [Pages.ChatPage],
     login: [Pages.LoginPage],
     signup: [Pages.SignupPage],
@@ -12,7 +12,7 @@ const pages: any = {
     password: [Pages.EditPasswordPage],
 }
 
-Object.entries(Components).forEach(([name, component]: any) => {
+Object.entries(Components).forEach(([name, component]) => {
     Handlebars.registerPartial(name, component)
 })
 
@@ -36,8 +36,8 @@ function handleNavigation() {
 
 document.addEventListener('DOMContentLoaded', handleNavigation)
 
-document.addEventListener('click', (e: any) => {
-    const page = e.target.getAttribute('page')
+document.addEventListener('click', (e: Event) => {
+    const page = (e.target as HTMLElement).getAttribute('page')
     if (page) {
         navigate(page)
         e.preventDefault()
