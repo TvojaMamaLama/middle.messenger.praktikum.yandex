@@ -1,5 +1,4 @@
-// @ts-nocheck
-export { ChatItem } from './ChatItem'
+export * as ChatItem from './ChatItem'
 export { PageTitle } from './PageTitle'
 export { InputField } from './InputField'
 export { Dialog } from './Dialog'
