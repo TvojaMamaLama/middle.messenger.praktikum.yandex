@@ -34,3 +34,5 @@ Netlify: https://fascinating-chaja-f1db4d.netlify.app/
 Страница профиля: /profile
 Страница изменения профиля: /edit
 Страница изменения настроек: /password
+
+Реализованы переходы между страницами по кнопкам
