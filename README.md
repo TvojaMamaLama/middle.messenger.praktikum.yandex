@@ -23,7 +23,7 @@
 Необходимый файл `.nvmrc`
 Запуск на http://localhost:3000/ `npm run dev`
 
-Домен на Netlify:
+Netlify: https://fascinating-chaja-f1db4d.netlify.app/
 
 Макеты в figma: https://www.figma.com/file/jF5fFFzgGOxQeB4CmKWTiE/Chat_external_link?node-id=0%3A1
 
