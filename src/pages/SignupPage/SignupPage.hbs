@@ -1,18 +1,18 @@
 {{#> Dialog}}
   <form class="signup-page">
     <div>
-      {{> PageTitle title="Регистрация"}}
-      {{> InputField className="signup-page__input" title="Почта" name="email"}}
-      {{> InputField className="signup-page__input" title="Логин" name="login"}}
-      {{> InputField className="signup-page__input" title="Имя" name="first_name"}}
-      {{> InputField className="signup-page__input" title="Фамилия" name="second_name"}}
-      {{> InputField className="signup-page__input" title="Телефон" name="phone"}}
-      {{> InputField className="signup-page__input" title="Пароль" name="password"}}
-      {{> InputField className="signup-page__input" title="Пароль (еще раз)" name="password"}}
+      {{>PageTitle title="Регистрация"}}
+      {{>InputField className="signup-page__input" title="Почта" name="email"}}
+      {{>InputField className="signup-page__input" title="Логин" name="login"}}
+      {{>InputField className="signup-page__input" title="Имя" name="first_name"}}
+      {{>InputField className="signup-page__input" title="Фамилия" name="second_name"}}
+      {{>InputField className="signup-page__input" title="Телефон" name="phone"}}
+      {{>InputField className="signup-page__input" title="Пароль" name="password"}}
+      {{>InputField className="signup-page__input" title="Пароль (еще раз)" name="password"}}
     </div>
     <div class="signup-page_buttons">
-      {{> Button type="primary" text="Зарегистрироваться" page="chat"}}
-      {{> Button type="text" text="Войти" page="login"}}
+      {{>LocalButton type="primary" text="Зарегистрироваться" page="chat"}}
+      {{>LocalButton type="text" text="Войти" page="login"}}
     </div>
   </form>
 {{/ Dialog}}
