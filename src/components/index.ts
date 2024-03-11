@@ -12,4 +12,3 @@ export { MessageList } from "./MessageList";
 export { ProfileSidebar } from "./ProfileSidebar";
 export { UserDataField } from "./UserDataField";
 export { ProfileAvatar } from "./ProfileAvatar";
-export { Modal } from "./Modal";
