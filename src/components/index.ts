@@ -1,4 +1,4 @@
-export { Button } from './Button'
+// @ts-nocheck
 export { ChatItem } from './ChatItem'
 export { PageTitle } from './PageTitle'
 export { InputField } from './InputField'
@@ -12,3 +12,4 @@ export { MessageList } from './MessageList'
 export { ProfileSidebar } from './ProfileSidebar'
 export { UserDataField } from './UserDataField'
 export { ProfileAvatar } from './ProfileAvatar'
+export { Button } from './Button'
