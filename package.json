@@ -27,7 +27,7 @@
     "prettier": "3.2.5",
     "sass": "^1.71.1",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^5.2.2",
+    "typescript": "^5.4.2",
     "vite": "^5.1.4",
     "vite-plugin-handlebars": "^2.0.0"
   }

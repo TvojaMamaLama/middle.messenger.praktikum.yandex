@@ -1,4 +1,7 @@
 <div class="sidebar">
+  <div class="sidebar-button">
+    {{>Button page="profile" text="Профиль" type="text" icon="right"}}
+  </div>
   {{>SearchPanel placeholder="Поиск"}}
   <div className='chat-list'>
     {{>ChatItem message="Привет" unread="2" name="Андрей" time="ср" }}
@@ -6,7 +9,4 @@
     {{>ChatItem message="Привет Привет Привет" name="Андрей" time="ср" }}
     {{>ChatItem message="Привет"name="Андрей" time="ср" }}
   </div>
-    <div class="sidebar-button">
-      {{>Button page="profile" text="Профиль" type="text" icon="right"}}
-    </div>
 </div>
