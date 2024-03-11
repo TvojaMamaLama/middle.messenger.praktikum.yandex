@@ -9,6 +9,11 @@ app.use("/*", (req, res) => {
   res.sendFile(`${__dirname}/dist/index.html`);
 });
 
+app.get("/", (req, res) => {
+  res.status(200);
+  res.send("Suuuuuu!");
+});
+
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}!`);
 });
