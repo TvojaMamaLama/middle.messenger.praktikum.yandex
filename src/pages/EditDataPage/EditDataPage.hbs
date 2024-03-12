@@ -3,17 +3,17 @@
   <div class="edit-data">
     {{>ProfileAvatar name="Ваня" }}
     <div class="edit-data__fieldset">
-      {{>UserDataField label="Почта" value="pochta@yandex.ru" name="email" }}
+      {{>UserDataField label="Почта" value="pochta@yandex.ru" name="email" canEdit="true" }}
       <div class="line"></div>
-      {{>UserDataField label="Логин" value="ivanivanov" name="login" }}
+      {{>UserDataField label="Логин" value="ivanivanov" name="login" canEdit="true" }}
       <div class="line"></div>
-      {{>UserDataField label="Имя" value="Иван" name="first_name" }}
+      {{>UserDataField label="Имя" value="Иван" name="first_name" canEdit="true" }}
       <div class="line"></div>
-      {{>UserDataField label="Фамилия" value="Иванов" name="second_name" }}
+      {{>UserDataField label="Фамилия" value="Иванов" name="second_name" canEdit="true" }}
       <div class="line"></div>
-      {{>UserDataField label="Имя в чате" value="Ваня" name="display_name" }}
+      {{>UserDataField label="Имя в чате" value="Ваня" name="chat_name" canEdit="true" }}
       <div class="line"></div>
-      {{>UserDataField label="Телефон" value="+7 (909) 967 30 30" name="phone" }}
+      {{>UserDataField label="Телефон" value="+7 (909) 967 30 30" name="phone" canEdit="true" }}
     </div>
 
     <div class="edit-data__button">

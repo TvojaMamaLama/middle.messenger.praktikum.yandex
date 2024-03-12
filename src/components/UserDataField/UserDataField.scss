@@ -14,7 +14,18 @@
     .data-field__value {
         font-size: 13px;
         line-height: 13px;
-
         color: $grey-01-color;
+        input {
+            border: none;
+            outline: none;
+            width: 100%;
+            padding: 0;
+
+            font-size: 13px;
+            line-height: 13px;
+            color: $grey-01-color;
+
+            text-align: right;
+        }
     }
 }
