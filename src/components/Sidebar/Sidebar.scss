@@ -1,0 +1,23 @@
+@import '../../variables.scss';
+
+.sidebar {
+    width: 310px;
+    height: 100%;
+    padding: 21px 10px 0;
+    box-sizing: border-box;
+
+    background: $grey-05-color;
+    border-right: 1px solid $grey-03-color;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    img {
+        margin-left: 5px;
+    }
+}

@@ -1,0 +1,27 @@
+.edit-data-page {
+    display: flex;
+    height: 100vh;
+}
+
+.edit-data-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.edit-data__fieldset {
+    min-width: 510px;
+}
+
+.edit-data__button {
+    margin-top: 60px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    button {
+        margin: 10px 0;
+    }
+}

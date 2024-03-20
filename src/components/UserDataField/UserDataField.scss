@@ -1,0 +1,31 @@
+@import '../../variables.scss';
+
+.data-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+    .data-field__label {
+        font-size: 13px;
+        line-height: 13px;
+    }
+
+    .data-field__value {
+        font-size: 13px;
+        line-height: 13px;
+        color: $grey-01-color;
+        input {
+            border: none;
+            outline: none;
+            width: 100%;
+            padding: 0;
+
+            font-size: 13px;
+            line-height: 13px;
+            color: $grey-01-color;
+
+            text-align: right;
+        }
+    }
+}

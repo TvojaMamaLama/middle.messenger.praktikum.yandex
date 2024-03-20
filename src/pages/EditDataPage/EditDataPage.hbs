@@ -1,0 +1,23 @@
+<div class="edit-data-page">
+  {{>ProfileSidebar page="profile"}}
+  <form class="edit-data-form">
+    {{>ProfileAvatar name="Ваня" }}
+    <div class="edit-data__fieldset">
+      {{>UserDataField label="Почта" value="pochta@yandex.ru" name="email" canEdit="true" }}
+      <div class="line"></div>
+      {{>UserDataField label="Логин" value="ivanivanov" name="login" canEdit="true" }}
+      <div class="line"></div>
+      {{>UserDataField label="Имя" value="Иван" name="first_name" canEdit="true" }}
+      <div class="line"></div>
+      {{>UserDataField label="Фамилия" value="Иванов" name="second_name" canEdit="true" }}
+      <div class="line"></div>
+      {{>UserDataField label="Имя в чате" value="Ваня" name="display_name" canEdit="true" }}
+      <div class="line"></div>
+      {{>UserDataField label="Телефон" value="+7 (909) 967 30 30" name="phone" canEdit="true" }}
+    </div>
+
+    <div class="edit-data__button">
+      {{>LocalButton text="Сохранить" type="primary"}}
+    </div>
+  </form>
+</div>

@@ -1,0 +1,15 @@
+.login-page {
+    width: 100%;
+}
+
+.login-page_buttons {
+    position: fixed;
+    bottom: 30px;
+
+    display: flex;
+    width: 100%;
+    max-width: 280px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+}

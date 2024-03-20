@@ -1,0 +1,12 @@
+@import 'variables.scss';
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/static/fonts/Inter.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: $default-text-color;
+    margin: 0;
+}
