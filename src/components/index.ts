@@ -1,4 +1,3 @@
-export { LocalButton } from './LocalButton'
 export { ChatItem } from './ChatItem'
 export { PageTitle } from './PageTitle'
 export { InputField } from './InputField'
