@@ -15,7 +15,9 @@ import Block from './tools/Block'
 
 const pages: { [key: string]: Block } = {
     '/login': new Pages.LoginPage({ name: 'Login' }),
-    '/': new Pages.SignupPage({ name: 'Signup' }),
+    '/signup': new Pages.SignupPage({ name: 'Signup' }),
+    '/error': new Pages.NotFoundPage({ name: 'Error' }),
+    '/not-found': new Pages.NotFoundPage({ name: 'NotFound' }),
 }
 
 const { pathname } = window.location

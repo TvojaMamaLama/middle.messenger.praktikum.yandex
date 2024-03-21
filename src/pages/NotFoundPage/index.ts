@@ -1,9 +1,9 @@
 import './ErrorPage.scss'
-import ErrorPageBlock from './ErrorPage.hbs?raw'
+import NotFoundPageBlock from './NotFoundPage.hbs?raw'
 import Block from '../../tools/Block'
 import { ButtonBlock } from '../../components/LocalButton'
 
-export class ErrorPage extends Block {
+export class NotFoundPage extends Block {
     constructor(props: { name?: string }) {
         super('div', { ...props })
     }
@@ -28,6 +28,6 @@ export class ErrorPage extends Block {
             }),
         }
 
-        return this.compile(ErrorPageBlock, this.props)
+        return this.compile(NotFoundPageBlock, this.props)
     }
 }
