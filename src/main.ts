@@ -18,6 +18,10 @@ const pages: { [key: string]: Block } = {
     '/signup': new Pages.SignupPage({ name: 'Signup' }),
     '/error': new Pages.NotFoundPage({ name: 'Error' }),
     '/not-found': new Pages.NotFoundPage({ name: 'NotFound' }),
+    '/password': new Pages.EditPasswordPage({ name: 'Password' }),
+    '/edit': new Pages.EditDataPage({ name: 'Edit' }),
+    '/profile': new Pages.ProfilePage({ name: 'Profile' }),
+    '/': new Pages.ProfilePage({ name: 'Profile' }),
 }
 
 const { pathname } = window.location
