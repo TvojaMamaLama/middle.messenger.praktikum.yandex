@@ -44,7 +44,7 @@ export class LoginPage extends Block {
                     focusout: (event: Event) => console.log(event),
                 },
             }),
-            AuthButton: new ButtonBlock({
+            LoginButton: new ButtonBlock({
                 text: 'Авторизоваться',
                 className: 'button button__primary',
                 events: {
