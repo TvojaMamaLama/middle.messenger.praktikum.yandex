@@ -1,6 +1,4 @@
 export { ChatItem } from './ChatItem'
-export { PageTitle } from './PageTitle'
-export { InputField } from './InputField'
 export { Dialog } from './Dialog'
 export { Sidebar } from './Sidebar'
 export { SearchPanel } from './SearchPanel'

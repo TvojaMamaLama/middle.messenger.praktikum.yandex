@@ -1,16 +1,12 @@
 <div class="dialog">
   <form class="login-page">
-    <div>
-      Вход
-      {{!-- {{>PageTitle title="Вход"}}
-      {{>InputField className="login-page__input" title="Логин" name="login"}}
-      {{>InputField className="login-page__input" title="Пароль" name="password"}} --}}
-    </div>
+    {{{ PageTitle }}}
+    {{{ LoginInputField }}}
+    {{{ PasswordInputField }}}
+
     <div class="login-page_buttons">
       {{{ AuthButton }}}
-
-      {{!-- {{>LocalButton type="primary" text="Авторизоваться" page="chat"}}
-      {{>LocalButton type="text" text="Нет аккаунта?" page="signup"}} --}}
+      {{{ ToSignupButton }}}
     </div>
   </form>
 </div>
