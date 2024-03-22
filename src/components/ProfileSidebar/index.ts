@@ -18,9 +18,10 @@ export class ProfileSidebarBlock extends Block {
     render() {
         this.children = {
             ExitButton: new ButtonBlock({
-                text: '<-',
-                // icon="arrow-left",
-                className: 'button button__primary',
+                icon: 'arrow-left',
+                width: '28',
+                height: '28',
+                className: 'button button__primary button__circle',
                 events: {
                     click: (e: Event) => {
                         this.handleSubmit(e)
