@@ -14,10 +14,31 @@ export class LoginPage extends Block {
         }
     }
 
-    handleSubmit = (e: Event) => {
+    onChange = (event: Event) => {
+        event.preventDefault()
+        const target = event.target as HTMLInputElement
+        if (target) {
+            const { name, value } = target
+            this.state[name] = value
+        }
+    }
+
+    validateFieldList(): boolean {
+        // вынести
+        const isValid: boolean = true
+        return isValid
+    }
+
+    onSubmit = (e: Event) => {
         e.preventDefault()
         if (e.target) {
-            console.log(e.target)
+            if (this.validateFieldList()) {
+                console.log('Авторизация', this.state)
+                ;(e.target as HTMLButtonElement).classList.remove('error')
+            } else {
+                console.log('Ошибка авторизации', this.state)
+                ;(e.target as HTMLButtonElement).classList.add('error')
+            }
         }
     }
 
@@ -32,7 +53,7 @@ export class LoginPage extends Block {
                 placeholder: 'логин',
                 type: 'text',
                 events: {
-                    focusout: (event: Event) => console.log(event),
+                    focusout: (event: Event) => this.onChange(event),
                 },
             }),
             PasswordInputField: new InputFieldBlock({
@@ -41,16 +62,14 @@ export class LoginPage extends Block {
                 placeholder: '**********',
                 type: 'password',
                 events: {
-                    focusout: (event: Event) => console.log(event),
+                    focusout: (event: Event) => this.onChange(event),
                 },
             }),
             LoginButton: new ButtonBlock({
                 text: 'Авторизоваться',
                 className: 'button button__primary',
                 events: {
-                    click: (e: Event) => {
-                        this.handleSubmit(e)
-                    },
+                    click: (e: Event) => this.onSubmit(e),
                 },
             }),
             ToSignupButton: new ButtonBlock({

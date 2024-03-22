@@ -18,10 +18,31 @@ export class SignupPage extends Block {
         }
     }
 
-    handleSubmit = (e: Event) => {
+    onChange = (event: Event) => {
+        event.preventDefault()
+        const target = event.target as HTMLInputElement
+        if (target) {
+            const { name, value } = target
+            this.state[name] = value
+        }
+    }
+
+    validateFieldList(): boolean {
+        // вынести
+        const isValid: boolean = true
+        return isValid
+    }
+
+    onSubmit = (e: Event) => {
         e.preventDefault()
         if (e.target) {
-            console.log(e.target)
+            if (this.validateFieldList()) {
+                console.log('Регистрация', this.state)
+                ;(e.target as HTMLButtonElement).classList.remove('error')
+            } else {
+                console.log('Ошибка регистрации', this.state)
+                ;(e.target as HTMLButtonElement).classList.add('error')
+            }
         }
     }
 
@@ -37,7 +58,7 @@ export class SignupPage extends Block {
                 placeholder: 'email@yandex.ru',
                 type: 'email',
                 events: {
-                    focusout: (event: Event) => console.log(event),
+                    focusout: (event: Event) => this.onChange(event),
                 },
             }),
             LoginInputField: new InputFieldBlock({
@@ -46,7 +67,7 @@ export class SignupPage extends Block {
                 placeholder: 'логин',
                 type: 'text',
                 events: {
-                    focusout: (event: Event) => console.log(event),
+                    focusout: (event: Event) => this.onChange(event),
                 },
             }),
             FirstNameInputField: new InputFieldBlock({
@@ -55,7 +76,7 @@ export class SignupPage extends Block {
                 placeholder: 'Никита',
                 type: 'text',
                 events: {
-                    focusout: (event: Event) => console.log(event),
+                    focusout: (event: Event) => this.onChange(event),
                 },
             }),
             SecondNameInputField: new InputFieldBlock({
@@ -64,7 +85,7 @@ export class SignupPage extends Block {
                 placeholder: 'Алешников',
                 type: 'text',
                 events: {
-                    focusout: (event: Event) => console.log(event),
+                    focusout: (event: Event) => this.onChange(event),
                 },
             }),
             PhoneInputField: new InputFieldBlock({
@@ -73,7 +94,7 @@ export class SignupPage extends Block {
                 placeholder: '89101234567',
                 type: '',
                 events: {
-                    focusout: (event: Event) => console.log(event),
+                    focusout: (event: Event) => this.onChange(event),
                 },
             }),
             PasswordInputField: new InputFieldBlock({
@@ -82,7 +103,7 @@ export class SignupPage extends Block {
                 placeholder: '**********',
                 type: 'password',
                 events: {
-                    focusout: (event: Event) => console.log(event),
+                    focusout: (event: Event) => this.onChange(event),
                 },
             }),
             RepeatPasswordInputField: new InputFieldBlock({
@@ -91,7 +112,7 @@ export class SignupPage extends Block {
                 placeholder: '**********',
                 type: 'password',
                 events: {
-                    focusout: (event: Event) => console.log(event),
+                    focusout: (event: Event) => this.onChange(event),
                 },
             }),
 
@@ -99,9 +120,7 @@ export class SignupPage extends Block {
                 text: 'Зарегистрироваться',
                 className: 'button button__primary',
                 events: {
-                    click: (e: Event) => {
-                        this.handleSubmit(e)
-                    },
+                    click: (e: Event) => this.onSubmit(e),
                 },
             }),
             ToLoginButton: new ButtonBlock({
@@ -109,7 +128,7 @@ export class SignupPage extends Block {
                 className: 'button button__text',
                 events: {
                     click: (e: Event) => {
-                        this.handleSubmit(e)
+                        console.log(e)
                     },
                 },
             }),

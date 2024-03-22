@@ -10,16 +10,37 @@ export class EditPasswordPage extends Block {
     constructor(props: { name?: string }) {
         super('div', { ...props })
         this.state = {
-            old_password: '',
-            password: '',
-            repeat_password: '',
+            oldPassword: '',
+            newPassword: '',
+            repeatNewPassword: '',
         }
     }
 
-    handleSubmit = (e: Event) => {
+    onChange = (event: Event) => {
+        event.preventDefault()
+        const target = event.target as HTMLInputElement
+        if (target) {
+            const { name, value } = target
+            this.state[name] = value
+        }
+    }
+
+    validateFieldList(): boolean {
+        // вынести
+        const isValid: boolean = true
+        return isValid
+    }
+
+    onSubmit = (e: Event) => {
         e.preventDefault()
         if (e.target) {
-            console.log(e.target)
+            if (this.validateFieldList()) {
+                console.log('Смена пароля', this.state)
+                ;(e.target as HTMLButtonElement).classList.remove('error')
+            } else {
+                console.log('Ошибка смены пароля', this.state)
+                ;(e.target as HTMLButtonElement).classList.add('error')
+            }
         }
     }
 
@@ -33,30 +54,30 @@ export class EditPasswordPage extends Block {
                 label: 'Старый пароль',
                 name: 'oldPassword',
                 type: 'password',
-                value: 'password',
+                value: '',
                 canEdit: true,
                 events: {
-                    focusout: (event: Event) => console.log(event),
+                    focusout: (event: Event) => this.onChange(event),
                 },
             }),
             PasswordUserDataField: new UserDataFieldBlock({
                 label: 'Новый пароль',
                 name: 'newPassword',
                 type: 'password',
-                value: 'password1',
+                value: '',
                 canEdit: true,
                 events: {
-                    focusout: (event: Event) => console.log(event),
+                    focusout: (event: Event) => this.onChange(event),
                 },
             }),
             RepeatPasswordUserDataField: new UserDataFieldBlock({
                 label: 'Повторите новый пароль',
-                name: 'newPassword',
+                name: 'repeatNewPassword',
                 type: 'password',
-                value: 'password1',
+                value: '',
                 canEdit: true,
                 events: {
-                    focusout: (event: Event) => console.log(event),
+                    focusout: (event: Event) => this.onChange(event),
                 },
             }),
             SaveButton: new ButtonBlock({
@@ -64,7 +85,7 @@ export class EditPasswordPage extends Block {
                 className: 'button button__primary',
                 events: {
                     click: (e: Event) => {
-                        this.handleSubmit(e)
+                        this.onSubmit(e)
                     },
                 },
             }),

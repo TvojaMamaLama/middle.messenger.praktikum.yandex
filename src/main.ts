@@ -31,4 +31,5 @@ const render = () => {
         renderDOM('#app', Page)
     }
 }
+
 render()

@@ -11,7 +11,6 @@ export class EditDataPage extends Block {
         super('div', { ...props })
         this.state = {
             login: '',
-            password: '',
             email: '',
             first_name: '',
             second_name: '',
@@ -20,10 +19,31 @@ export class EditDataPage extends Block {
         }
     }
 
-    handleSubmit = (e: Event) => {
+    onChange = (event: Event) => {
+        event.preventDefault()
+        const target = event.target as HTMLInputElement
+        if (target) {
+            const { name, value } = target
+            this.state[name] = value
+        }
+    }
+
+    validateFieldList(): boolean {
+        // вынести
+        const isValid: boolean = true
+        return isValid
+    }
+
+    onSubmit = (e: Event) => {
         e.preventDefault()
         if (e.target) {
-            console.log(e.target)
+            if (this.validateFieldList()) {
+                console.log('Изменение данных', this.state)
+                ;(e.target as HTMLButtonElement).classList.remove('error')
+            } else {
+                console.log('Ошибка изменения данных', this.state)
+                ;(e.target as HTMLButtonElement).classList.add('error')
+            }
         }
     }
 
@@ -39,7 +59,7 @@ export class EditDataPage extends Block {
                 value: 'email@yandex.ru',
                 canEdit: true,
                 events: {
-                    focusout: (event: Event) => console.log(event),
+                    focusout: (event: Event) => this.onChange(event),
                 },
             }),
             LoginUserDataField: new UserDataFieldBlock({
@@ -49,7 +69,7 @@ export class EditDataPage extends Block {
                 value: 'ivanivanov',
                 canEdit: true,
                 events: {
-                    focusout: (event: Event) => console.log(event),
+                    focusout: (event: Event) => this.onChange(event),
                 },
             }),
             FirstNameUserDataField: new UserDataFieldBlock({
@@ -59,7 +79,7 @@ export class EditDataPage extends Block {
                 value: 'Иван',
                 canEdit: true,
                 events: {
-                    focusout: (event: Event) => console.log(event),
+                    focusout: (event: Event) => this.onChange(event),
                 },
             }),
             SecondNameUserDataField: new UserDataFieldBlock({
@@ -69,7 +89,7 @@ export class EditDataPage extends Block {
                 value: 'Иванов',
                 canEdit: true,
                 events: {
-                    focusout: (event: Event) => console.log(event),
+                    focusout: (event: Event) => this.onChange(event),
                 },
             }),
             DisplayNameUserDataField: new UserDataFieldBlock({
@@ -79,17 +99,17 @@ export class EditDataPage extends Block {
                 value: 'Ваня',
                 canEdit: true,
                 events: {
-                    focusout: (event: Event) => console.log(event),
+                    focusout: (event: Event) => this.onChange(event),
                 },
             }),
             PhoneUserDataField: new UserDataFieldBlock({
                 label: 'Телефон',
-                name: 'phone_name',
+                name: 'phone',
                 type: 'text',
                 value: '+7 (909) 967 30 30',
                 canEdit: true,
                 events: {
-                    focusout: (event: Event) => console.log(event),
+                    focusout: (event: Event) => this.onChange(event),
                 },
             }),
             SaveButton: new ButtonBlock({
@@ -97,7 +117,7 @@ export class EditDataPage extends Block {
                 className: 'button button__primary',
                 events: {
                     click: (e: Event) => {
-                        this.handleSubmit(e)
+                        this.onSubmit(e)
                     },
                 },
             }),

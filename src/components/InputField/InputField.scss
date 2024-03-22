@@ -15,6 +15,10 @@
 }
 
 .input-field__element {
+    &.error {
+        color: red;
+    }
+
     input {
         border: none;
         width: 100%;

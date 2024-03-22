@@ -16,6 +16,10 @@
     img {
         pointer-events: none;
     }
+
+    &.error {
+        background-color: red;
+    }
 }
 
 .button__primary {
