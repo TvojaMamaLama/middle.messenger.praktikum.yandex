@@ -1,6 +1,0 @@
-export { ChatItem } from './ChatItem'
-export { Sidebar } from './Sidebar'
-export { SearchPanel } from './SearchPanel'
-export { ChatHeader } from './ChatHeader'
-export { MessageWrapper } from './MessageWrapper'
-export { MessageList } from './MessageList'

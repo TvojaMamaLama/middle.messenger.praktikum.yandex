@@ -21,7 +21,8 @@ const pages: { [key: string]: Block } = {
     '/password': new Pages.EditPasswordPage({ name: 'Password' }),
     '/edit': new Pages.EditDataPage({ name: 'Edit' }),
     '/profile': new Pages.ProfilePage({ name: 'Profile' }),
-    '/': new Pages.ProfilePage({ name: 'Profile' }),
+    // '/chat': new Pages.ChatPage({ name: 'Chat' }),
+    '/': new Pages.ChatPage({ name: 'Chat' }),
 }
 
 const { pathname } = window.location
