@@ -19,7 +19,7 @@ export class MessageFieldBlock extends Block {
         this.children = {
             ActionMenuButton: new ButtonBlock({
                 icon: 'pin',
-                className: 'button button__primary',
+                className: 'button button__primary button__circle',
                 events: {
                     click: (e: Event) => {
                         this.handleSubmit(e)
@@ -30,7 +30,7 @@ export class MessageFieldBlock extends Block {
                 icon: 'arrow-right',
                 width: '28',
                 height: '28',
-                className: 'button button__primary',
+                className: 'button button__primary button__circle',
                 events: {
                     click: (e: Event) => {
                         this.handleSubmit(e)

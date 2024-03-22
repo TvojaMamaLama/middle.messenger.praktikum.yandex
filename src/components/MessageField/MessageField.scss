@@ -4,7 +4,9 @@
     width: 100%;
     padding: 11px 13px;
     box-sizing: border-box;
-    min-height: 54px;
+    min-height: 55px;
+    max-height: 55px;
+    height: 55px;
     .message {
         display: flex;
         justify-content: space-between;

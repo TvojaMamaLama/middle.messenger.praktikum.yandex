@@ -8,9 +8,10 @@ export class ChatHeaderBlock extends Block {
         super('div', props)
     }
     render() {
-        this.props.children = {
+        this.children = {
             Avatar: new AvatarBlock({
-                size: '34',
+                avatar: '',
+                size: 34,
             }),
         }
 

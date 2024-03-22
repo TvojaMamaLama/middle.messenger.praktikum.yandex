@@ -11,7 +11,10 @@ export class ChatAreaBlock extends Block {
     }
     render() {
         this.children = {
-            ChatHeader: new ChatHeaderBlock({}),
+            ChatHeader: new ChatHeaderBlock({
+                name: 'Никита',
+                avatar: '',
+            }),
             MessageList: new MessageListBlock({}),
             MessageField: new MessageFieldBlock({}),
         }
