@@ -1,7 +1,9 @@
 <div class="input-field {{#if className}}{{ className }}{{/if}}">
-  <div class="input-field__title">{{ title }}</div>
-  <div  class="input-field__element">
-    <input type="{{ type }}" value="{{value}}" name="{{ name }}" placeholder="{{placeholder}}" />
+  <div class="input-field__text">
+    <div class="input-field__title">{{ title }}</div>
+    <div class="input-field__error" name="{{name}}">{{errorMessage}}</div>
   </div>
-  <span class="input-field__error" name="{{name}}">{{errorMessage}}</span>
+  <div  class="input-field__element">
+    <input class="input" type="{{ type }}" value="{{value}}" name="{{ name }}" placeholder="{{placeholder}}" />
+  </div>
 </div>

@@ -4,6 +4,7 @@ import Block from '../../tools/Block'
 import { ButtonBlock } from '../../components/LocalButton'
 import { InputFieldBlock } from '../../components/InputField'
 import { PageTitleBlock } from '../../components/PageTitle'
+import { ErrorsMessage, validation, FieldEnum } from '../../utils/validation'
 
 export class SignupPage extends Block {
     constructor(props: { name?: string }) {
@@ -15,6 +16,7 @@ export class SignupPage extends Block {
             first_name: '',
             second_name: '',
             phone: '',
+            password_repeat: '',
         }
     }
 
@@ -27,9 +29,37 @@ export class SignupPage extends Block {
         }
     }
 
+    validateField(inputName: string, value: string) {
+        const isValid = validation(
+            inputName,
+            value,
+            this.state.newPassword ? (this.state.newPassword as string) : ''
+        )
+        const errorMessage: string = isValid
+            ? ''
+            : ErrorsMessage[inputName as keyof typeof ErrorsMessage]
+        this.children[
+            inputName == (inputName as keyof typeof FieldEnum)
+                ? FieldEnum[inputName]
+                : 'login'
+        ]?.setProps({
+            errorMessage: errorMessage,
+            value: value,
+        })
+        this.state[inputName] = value
+        return isValid
+    }
+
     validateFieldList(): boolean {
-        // вынести
-        const isValid: boolean = true
+        let isValid: boolean = true
+        const inputElements: NodeListOf<HTMLInputElement> =
+            document.querySelectorAll('.input')
+        inputElements.forEach((inputElement: HTMLInputElement) => {
+            const { name, value } = inputElement
+            if (!this.validateField(name, value)) {
+                isValid = false
+            }
+        })
         return isValid
     }
 
@@ -108,7 +138,7 @@ export class SignupPage extends Block {
             }),
             RepeatPasswordInputField: new InputFieldBlock({
                 title: 'Пароль (еще раз)',
-                name: 'password',
+                name: 'password_repeat',
                 placeholder: '**********',
                 type: 'password',
                 events: {

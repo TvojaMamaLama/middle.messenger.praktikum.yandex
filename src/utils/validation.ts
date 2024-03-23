@@ -1,19 +1,41 @@
-export const login_pattern = /^[a-zA-Z_-]{3,20}\D$/
-export const name_pattern = /^([А-ЯA-Z][а-яa-z-]*)$/
-export const email_pattern = /^[a-zA-Z0-9_-]+@[a-zA-Z]+\.[a-zA-Z]+$/
+export const login_pattern =
+    /^(?=.*[a-zA-Z])(?!.*\d{3,20}$)[a-zA-Z0-9_-]{3,20}$/
+
 export const password_pattern = /^(?=.*[A-Z])(?=.*\d).{8,40}$/
+export const name_pattern = /^[A-ZА-ЯЁ][a-zA-ZА-ЯЁ-]*[a-zа-яё]$/u
+export const email_pattern = /^[A-Za-z0-9_-]+@[A-Za-z0-9_-]+\.[A-Za-z]+$/
 export const phone_pattern = /^\+?\d{10,15}$/
-export const message_pattern = /^.*$/
+
+export const message_pattern = /^.+$/
+export type FieldNameType =
+    | 'login'
+    | 'password'
+    | 'email'
+    | 'first_name'
+    | 'second_name'
+    | 'phone'
+    | 'password_repeat'
+    | 'old_password'
+
+export enum FieldEnum {
+    'email' = 'EmailInputField',
+    'login' = 'LoginInputField',
+    'first_name' = 'FirstNameInputField',
+    'second_name' = 'SecondNameInputField',
+    'phone' = 'PhoneInputField',
+    'password' = 'PasswordInputField',
+    'password_repeat' = 'RepeatPasswordInputField',
+}
 
 export enum ErrorsMessage {
     'login' = 'Неверный формат логина',
-    'password' = 'Недопустимый формат',
-    'email' = 'Введите корректный email',
-    'first_name' = 'Такого имени не бывает',
-    'second_name' = 'Такой фамилии не бывает',
-    'phone' = 'Неверный формат',
+    'password' = 'Неверный формат пароля',
+    'email' = 'Неверный формат email',
+    'first_name' = 'Неверный формат имени',
+    'second_name' = 'Неверный формат фамилии',
+    'phone' = 'Неверный формат телефона',
     'password_repeat' = 'Пароль не совпадает',
-    'old-Password' = 'Неверный пароль',
+    'old_password' = 'Неверный пароль',
 }
 
 export const validation = (

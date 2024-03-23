@@ -4,8 +4,8 @@ import Block from './tools/Block'
 
 const pages: { [key: string]: Block } = {
     '/login': new Pages.LoginPage({ name: 'Login' }),
-    '/': new Pages.LoginPage({ name: 'Login' }),
     '/signup': new Pages.SignupPage({ name: 'Signup' }),
+    '/': new Pages.SignupPage({ name: 'Signup' }),
     '/error': new Pages.NotFoundPage({ name: 'Error' }),
     '/not-found': new Pages.NotFoundPage({ name: 'NotFound' }),
     '/password': new Pages.EditPasswordPage({ name: 'Password' }),

@@ -4,6 +4,7 @@ import Block from '../../tools/Block'
 import { ButtonBlock } from '../../components/LocalButton'
 import { InputFieldBlock } from '../../components/InputField'
 import { PageTitleBlock } from '../../components/PageTitle'
+import { ErrorsMessage, validation, FieldEnum } from '../../utils/validation'
 
 export class LoginPage extends Block {
     constructor(props: { name?: string }) {
@@ -23,9 +24,33 @@ export class LoginPage extends Block {
         }
     }
 
+    validateField(inputName: string, value: string) {
+        const isValid = validation(inputName, value)
+        const errorMessage: string = isValid
+            ? ''
+            : ErrorsMessage[inputName as keyof typeof ErrorsMessage]
+        this.children[
+            inputName == (inputName as keyof typeof FieldEnum)
+                ? FieldEnum[inputName]
+                : ''
+        ]?.setProps({
+            errorMessage: errorMessage,
+            value: value,
+        })
+        this.state[inputName] = value
+        return isValid
+    }
+
     validateFieldList(): boolean {
-        // вынести
-        const isValid: boolean = true
+        let isValid: boolean = true
+        const inputElements: NodeListOf<HTMLInputElement> =
+            document.querySelectorAll('.input')
+        inputElements.forEach((inputElement: HTMLInputElement) => {
+            const { name, value } = inputElement
+            if (!this.validateField(name, value)) {
+                isValid = false
+            }
+        })
         return isValid
     }
 
