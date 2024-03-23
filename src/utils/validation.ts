@@ -27,6 +27,8 @@ export enum InputFieldEnum {
     'login' = 'LoginInputField',
     'password' = 'PasswordInputField',
     'password_repeat' = 'RepeatPasswordInputField',
+
+    'message' = 'MessageInput',
 }
 
 export enum UserDataFieldEnum {
@@ -55,6 +57,7 @@ export enum ErrorsMessage {
     'oldPassword' = 'Неверный пароль!',
     'newPassword' = 'Неверный формат нового пароля',
     'repeatNewPassword' = 'Не совпадает',
+    'message' = 'Пустое сообщение',
 }
 
 export const validation = (
@@ -62,7 +65,6 @@ export const validation = (
     value: string,
     repeat_value?: string
 ): boolean => {
-    console.log(value, repeat_value)
     switch (type) {
         case 'login':
             return login_pattern.test(value)
@@ -70,6 +72,8 @@ export const validation = (
             return password_pattern.test(value)
         case 'newPassword':
             return password_pattern.test(value)
+        case 'message':
+            return message_pattern.test(value)
         case 'email':
             return email_pattern.test(value)
         case 'first_name':

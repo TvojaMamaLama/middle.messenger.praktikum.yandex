@@ -20,6 +20,9 @@
     &.error {
         background-color: red;
     }
+    &.send-error {
+        opacity: 0.4;
+    }
 }
 
 .button__primary {
