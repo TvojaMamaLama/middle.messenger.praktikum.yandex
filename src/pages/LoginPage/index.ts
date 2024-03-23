@@ -4,7 +4,11 @@ import Block from '../../tools/Block'
 import { ButtonBlock } from '../../components/LocalButton'
 import { InputFieldBlock } from '../../components/InputField'
 import { PageTitleBlock } from '../../components/PageTitle'
-import { ErrorsMessage, validation, FieldEnum } from '../../utils/validation'
+import {
+    ErrorsMessage,
+    validation,
+    InputFieldEnum,
+} from '../../utils/validation'
 
 export class LoginPage extends Block {
     constructor(props: { name?: string }) {
@@ -30,8 +34,8 @@ export class LoginPage extends Block {
             ? ''
             : ErrorsMessage[inputName as keyof typeof ErrorsMessage]
         this.children[
-            inputName == (inputName as keyof typeof FieldEnum)
-                ? FieldEnum[inputName]
+            inputName == (inputName as keyof typeof InputFieldEnum)
+                ? InputFieldEnum[inputName]
                 : ''
         ]?.setProps({
             errorMessage: errorMessage,

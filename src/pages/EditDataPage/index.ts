@@ -5,6 +5,11 @@ import { ButtonBlock } from '../../components/LocalButton'
 import { UserDataFieldBlock } from '../../components/UserDataField'
 import { ProfileAvatarBlock } from '../../components/ProfileAvatar'
 import { ProfileSidebarBlock } from '../../components/ProfileSidebar'
+import {
+    ErrorsMessage,
+    UserDataFieldEnum,
+    validation,
+} from '../../utils/validation'
 
 export class EditDataPage extends Block {
     constructor(props: { name?: string }) {
@@ -28,9 +33,38 @@ export class EditDataPage extends Block {
         }
     }
 
+    validateField(inputName: string, value: string) {
+        const isValid = validation(
+            inputName,
+            value,
+            this.state.newPassword ? (this.state.newPassword as string) : ''
+        )
+        const errorMessage: string = isValid
+            ? ''
+            : ErrorsMessage[inputName as keyof typeof ErrorsMessage]
+        console.log(errorMessage)
+        this.children[
+            inputName == (inputName as keyof typeof UserDataFieldEnum)
+                ? UserDataFieldEnum[inputName]
+                : 'login'
+        ]?.setProps({
+            errorMessage: errorMessage,
+            value: value,
+        })
+        this.state[inputName] = value
+        return isValid
+    }
+
     validateFieldList(): boolean {
-        // вынести
-        const isValid: boolean = true
+        let isValid: boolean = true
+        const inputElements: NodeListOf<HTMLInputElement> =
+            document.querySelectorAll('.input')
+        inputElements.forEach((inputElement: HTMLInputElement) => {
+            const { name, value } = inputElement
+            if (!this.validateField(name, value)) {
+                isValid = false
+            }
+        })
         return isValid
     }
 
@@ -56,7 +90,7 @@ export class EditDataPage extends Block {
             EmailUserDataField: new UserDataFieldBlock({
                 label: 'Почта',
                 name: 'email',
-                value: 'email@yandex.ru',
+                // value: 'email@yandex.ru',
                 canEdit: true,
                 events: {
                     focusout: (event: Event) => this.onChange(event),
@@ -66,7 +100,7 @@ export class EditDataPage extends Block {
                 label: 'Логин',
                 name: 'login',
                 type: 'text',
-                value: 'ivanivanov',
+                // value: 'ivanivanov',
                 canEdit: true,
                 events: {
                     focusout: (event: Event) => this.onChange(event),
@@ -76,7 +110,7 @@ export class EditDataPage extends Block {
                 label: 'Имя',
                 name: 'first_name',
                 type: 'text',
-                value: 'Иван',
+                // value: 'Иван',
                 canEdit: true,
                 events: {
                     focusout: (event: Event) => this.onChange(event),
@@ -86,7 +120,7 @@ export class EditDataPage extends Block {
                 label: 'Фамилия',
                 name: 'second_name',
                 type: 'text',
-                value: 'Иванов',
+                // value: 'Иванов',
                 canEdit: true,
                 events: {
                     focusout: (event: Event) => this.onChange(event),
@@ -96,7 +130,7 @@ export class EditDataPage extends Block {
                 label: 'Имя в чате',
                 name: 'display_name',
                 type: 'text',
-                value: 'Ваня',
+                // value: 'Ваня',
                 canEdit: true,
                 events: {
                     focusout: (event: Event) => this.onChange(event),
@@ -106,7 +140,7 @@ export class EditDataPage extends Block {
                 label: 'Телефон',
                 name: 'phone',
                 type: 'text',
-                value: '+7 (909) 967 30 30',
+                // value: '+7 (909) 967 30 30',
                 canEdit: true,
                 events: {
                     focusout: (event: Event) => this.onChange(event),

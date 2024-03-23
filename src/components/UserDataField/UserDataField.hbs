@@ -1,8 +1,11 @@
 <div class="data-field">
-  <div class="data-field__label">{{label}}</div>
+  <div class="data-field__label">
+    {{label}}
+    <span class="error">{{errorMessage}}</span>
+  </div>
   {{#if canEdit}}
     <div class="data-field__value">
-      <input type="{{ type }}" value="{{ value }}" name="{{ name }}" />
+      <input class="input" type="{{ type }}" value="{{ value }}" name="{{ name }}" />
     </div>
   {{else}}
     <div class="data-field__value">{{value}}</div>

@@ -5,6 +5,11 @@ import { ButtonBlock } from '../../components/LocalButton'
 import { UserDataFieldBlock } from '../../components/UserDataField'
 import { ProfileAvatarBlock } from '../../components/ProfileAvatar'
 import { ProfileSidebarBlock } from '../../components/ProfileSidebar'
+import {
+    ErrorsMessage,
+    UserDataFieldEnum,
+    validation,
+} from '../../utils/validation'
 
 export class EditPasswordPage extends Block {
     constructor(props: { name?: string }) {
@@ -25,9 +30,39 @@ export class EditPasswordPage extends Block {
         }
     }
 
+    validateField(inputName: string, value: string) {
+        const isValid = validation(
+            inputName,
+            value,
+            this.state.newPassword ? (this.state.newPassword as string) : ''
+        )
+        const errorMessage: string = isValid
+            ? ''
+            : ErrorsMessage[inputName as keyof typeof ErrorsMessage]
+
+        console.log(errorMessage)
+        this.children[
+            inputName == (inputName as keyof typeof UserDataFieldEnum)
+                ? UserDataFieldEnum[inputName]
+                : 'login'
+        ]?.setProps({
+            errorMessage: errorMessage,
+            value: value,
+        })
+        this.state[inputName] = value
+        return isValid
+    }
+
     validateFieldList(): boolean {
-        // вынести
-        const isValid: boolean = true
+        let isValid: boolean = true
+        const inputElements: NodeListOf<HTMLInputElement> =
+            document.querySelectorAll('.input')
+        inputElements.forEach((inputElement: HTMLInputElement) => {
+            const { name, value } = inputElement
+            if (!this.validateField(name, value)) {
+                isValid = false
+            }
+        })
         return isValid
     }
 

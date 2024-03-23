@@ -5,8 +5,8 @@ export const password_pattern = /^(?=.*[A-Z])(?=.*\d).{8,40}$/
 export const name_pattern = /^[A-ZА-ЯЁ][a-zA-ZА-ЯЁ-]*[a-zа-яё]$/u
 export const email_pattern = /^[A-Za-z0-9_-]+@[A-Za-z0-9_-]+\.[A-Za-z]+$/
 export const phone_pattern = /^\+?\d{10,15}$/
-
 export const message_pattern = /^.+$/
+
 export type FieldNameType =
     | 'login'
     | 'password'
@@ -15,16 +15,31 @@ export type FieldNameType =
     | 'second_name'
     | 'phone'
     | 'password_repeat'
+    | 'display_name'
     | 'old_password'
 
-export enum FieldEnum {
+export enum InputFieldEnum {
     'email' = 'EmailInputField',
-    'login' = 'LoginInputField',
     'first_name' = 'FirstNameInputField',
     'second_name' = 'SecondNameInputField',
     'phone' = 'PhoneInputField',
+
+    'login' = 'LoginInputField',
     'password' = 'PasswordInputField',
     'password_repeat' = 'RepeatPasswordInputField',
+}
+
+export enum UserDataFieldEnum {
+    'email' = 'EmailUserDataField',
+    'login' = 'LoginUserDataField',
+    'first_name' = 'FirstNameUserDataField',
+    'second_name' = 'SecondNameUserDataField',
+    'phone' = 'PhoneUserDataField',
+    'display_name' = 'DisplayNameUserDataField',
+
+    'oldPassword' = 'OldPasswordUserDataField',
+    'newPassword' = 'PasswordUserDataField',
+    'repeatNewPassword' = 'RepeatPasswordUserDataField',
 }
 
 export enum ErrorsMessage {
@@ -33,9 +48,13 @@ export enum ErrorsMessage {
     'email' = 'Неверный формат email',
     'first_name' = 'Неверный формат имени',
     'second_name' = 'Неверный формат фамилии',
+    'display_name' = 'Неверный формат',
     'phone' = 'Неверный формат телефона',
     'password_repeat' = 'Пароль не совпадает',
     'old_password' = 'Неверный пароль',
+    'oldPassword' = 'Неверный пароль!',
+    'newPassword' = 'Неверный формат нового пароля',
+    'repeatNewPassword' = 'Не совпадает',
 }
 
 export const validation = (
@@ -43,19 +62,23 @@ export const validation = (
     value: string,
     repeat_value?: string
 ): boolean => {
+    console.log(value, repeat_value)
     switch (type) {
         case 'login':
             return login_pattern.test(value)
         case 'password':
             return password_pattern.test(value)
+        case 'newPassword':
+            return password_pattern.test(value)
         case 'email':
             return email_pattern.test(value)
-        case 'name':
+        case 'first_name':
+        case 'second_name':
+        case 'display_name':
             return name_pattern.test(value)
         case 'phone':
             return phone_pattern.test(value)
-        case 'new_passwrd':
-        case 'password_repeat':
+        case 'repeatNewPassword':
             return value === repeat_value
         default:
             return false
