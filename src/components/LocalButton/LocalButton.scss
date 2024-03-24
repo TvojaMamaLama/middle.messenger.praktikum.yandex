@@ -20,6 +20,7 @@
     &.error {
         background-color: red;
     }
+
     &.send-error {
         opacity: 0.4;
     }
@@ -29,7 +30,6 @@
     width: 280px;
     width: 100%;
     padding: 12px;
-
     background: $primary-color;
     color: $white-color;
     border-radius: 8px;

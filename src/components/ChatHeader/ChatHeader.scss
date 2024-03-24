@@ -2,12 +2,11 @@
 
 .chat-header__wrapper {
     width: 100%;
-    padding: 0px 20px;
+    padding: 0 20px;
     box-sizing: border-box;
     min-height: 55px;
     max-height: 55px;
     height: 55px;
-
     display: flex;
     flex-direction: column;
 }
@@ -15,8 +14,7 @@
 .chat-header {
     display: flex;
     height: 55px;
-
-    padding: 10px 0px;
+    padding: 10px 0;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
