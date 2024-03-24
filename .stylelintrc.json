@@ -4,7 +4,6 @@
         "at-rule-no-unknown": null,
         "selector-class-pattern": null,
         "scss/at-rule-no-unknown": true,
-        "color-no-hex-alpha-channel": null,
         "import-notation": "string"
     },
     "ignoreFiles": ["dist/*"],
