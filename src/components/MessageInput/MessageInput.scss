@@ -1,0 +1,17 @@
+@import '../../variables.scss';
+
+.message-field {
+    margin: 0 10px;
+    width: 100%;
+
+    input {
+        height: 32px;
+        width: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        background: $grey-02-color;
+        border: none;
+        outline: none;
+        border-radius: 30px;
+    }
+}

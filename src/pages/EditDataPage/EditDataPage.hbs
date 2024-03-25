@@ -1,23 +1,23 @@
 <div class="edit-data-page">
-  {{>ProfileSidebar page="profile"}}
+  {{{  ProfileSidebar }}}
   <form class="edit-data-form">
-    {{>ProfileAvatar name="Ваня" }}
+    {{{ ProfileAvatar }}}
     <div class="edit-data__fieldset">
-      {{>UserDataField label="Почта" value="pochta@yandex.ru" name="email" canEdit="true" }}
+      {{{ EmailUserDataField }}}
       <div class="line"></div>
-      {{>UserDataField label="Логин" value="ivanivanov" name="login" canEdit="true" }}
+      {{{ LoginUserDataField }}}
       <div class="line"></div>
-      {{>UserDataField label="Имя" value="Иван" name="first_name" canEdit="true" }}
+      {{{ FirstNameUserDataField }}}
       <div class="line"></div>
-      {{>UserDataField label="Фамилия" value="Иванов" name="second_name" canEdit="true" }}
+      {{{ SecondNameUserDataField }}}
       <div class="line"></div>
-      {{>UserDataField label="Имя в чате" value="Ваня" name="display_name" canEdit="true" }}
+      {{{ DisplayNameUserDataField }}}
       <div class="line"></div>
-      {{>UserDataField label="Телефон" value="+7 (909) 967 30 30" name="phone" canEdit="true" }}
+      {{{ PhoneUserDataField }}}
     </div>
 
     <div class="edit-data__button">
-      {{>LocalButton text="Сохранить" type="primary"}}
+      {{{ SaveButton }}}
     </div>
   </form>
 </div>

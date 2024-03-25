@@ -1,28 +1,28 @@
 <div class="profile-page">
-  {{>ProfileSidebar page="chat" }}
+  {{{  ProfileSidebar }}}
   <div class="user-data">
-    {{>ProfileAvatar name="Ваня" }}
+    {{{ ProfileAvatar }}}
 
     <div class="user-data__fieldset">
-      {{>UserDataField label="Почта" value="pochta@yandex.ru" name="email" }}
+     {{{ EmailUserDataField }}}
       <div class="line"></div>
-      {{>UserDataField label="Логин" value="ivanivanov" name="login" }}
+      {{{ LoginUserDataField }}}
       <div class="line"></div>
-      {{>UserDataField label="Имя" value="Иван" name="first_name" }}
+      {{{ FirstNameUserDataField }}}
       <div class="line"></div>
-      {{>UserDataField label="Фамилия" value="Иванов" name="second_name" }}
+      {{{ SecondNameUserDataField }}}
       <div class="line"></div>
-      {{>UserDataField label="Имя в чате" value="Ваня" name="display_name" }}
+      {{{ DisplayNameUserDataField }}}
       <div class="line"></div>
-      {{>UserDataField label="Телефон" value="+7 (909) 967 30 30" name="phone" }}
+      {{{ PhoneUserDataField }}}
     </div>
 
     <div class="user-data__buttons">
-      {{>LocalButton text="Изменить данные" type="text" page="edit"}}
+      {{{ EditDataButton }}}
       <div class="line"></div>
-      {{>LocalButton text="Изменить пароль" type="text" edit="password" page="password"}}
+      {{{ EditPasswordButton }}}
       <div class="line"></div>
-      {{>LocalButton text="Выйти" type="text" page="login"}}
+      {{{ ExitButton }}}
     </div>
   </div>
 </div>

@@ -1,19 +1,13 @@
-<button
-  class="
-    button
-    {{#if type}} button__{{type}}{{/if}}
-    {{#if stylingMode}} button__{{stylingMode}}{{/if}}
-  "
+<div
   style="
     {{#if width}}width:{{width}}px;{{/if}}
     {{#if height}}height:{{height}}px;{{/if}}
   "
-  page="{{ page }}"
 >
   {{#if icon}}
-    <img class="button__icon" src="/static/icons/{{icon}}.svg" />
+    <img alt="{{ text }}" class="button__icon" src="/static/icons/{{icon}}.svg" />
   {{/if}}
   {{#if text}}
     <div>{{ text }}</div>
   {{/if}}
-</button>
+</div>

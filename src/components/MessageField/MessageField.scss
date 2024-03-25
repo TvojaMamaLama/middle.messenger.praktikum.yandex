@@ -1,0 +1,32 @@
+@import '../../variables.scss';
+
+.message-field-wrapper {
+    width: 100%;
+    padding: 11px 13px;
+    box-sizing: border-box;
+    min-height: 55px;
+    max-height: 55px;
+    height: 55px;
+
+    .message {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.message-field {
+    margin: 0 10px;
+    width: 100%;
+
+    input {
+        height: 32px;
+        width: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        background: $grey-02-color;
+        border: none;
+        outline: none;
+        border-radius: 30px;
+    }
+}

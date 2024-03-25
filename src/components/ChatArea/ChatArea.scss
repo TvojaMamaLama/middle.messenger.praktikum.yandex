@@ -1,0 +1,16 @@
+@import '../../variables.scss';
+
+.chat {
+    width: calc(100vw - 310px);
+    height: 100vh;
+}
+
+.chat__empty {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 12px;
+    color: $grey-01-color;
+}
